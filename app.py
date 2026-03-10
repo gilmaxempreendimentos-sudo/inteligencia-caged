@@ -105,7 +105,7 @@ if menu == "🏢 Visão Executiva (Home)":
         st.markdown("""
         <div class="feature-box">
             <h4>📈 Filtros de Alta Resolução</h4>
-            <p>Mapeamento granular por Estado, Cargo (CBO) e Setor Económico (CNAE). Entenda a curva de maturidade do seu time, do nível Júnior ao Master.</p>
+            <p>Mapeamento granular por Estado, Cargo (CBO) e Setor Econômico (CNAE). Entenda a curva de maturidade do seu time, do nível Júnior ao Master.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -126,7 +126,7 @@ elif menu == "📊 Painel de Inteligência":
     min_amostra = st.sidebar.slider("Confiabilidade Estatística (Amostra Mínima)", 1, 100, 3)
 
     st.title("Painel de Inteligência Salarial")
-    st.caption(f"Base de dados atualizada: {len(df):,} cenários mapeados por setor económico.")
+    st.caption(f"Base de dados atualizada: {len(df):,} cenários mapeados por setor econômico.")
 
     cargo_busca = st.text_input("🔍 Buscar Ocupação", placeholder="Ex: Engenheiro de Producao")
 
@@ -174,7 +174,7 @@ elif menu == "📊 Painel de Inteligência":
         dados_setor = df_cargo[df_cargo['setor_economico'] == setor_detalhe].iloc[0]
 
         df_senioridade = pd.DataFrame({
-            "Nível": ["Júnior (P25)", "Pleno (P50)", "Sénior (P75)", "Master (P90)"],
+            "Nível": ["Júnior (P25)", "Pleno (P50)", "Sênior (P75)", "Master (P90)"],
             "Salário": [dados_setor['junior_p25'], dados_setor['pleno_p50'], dados_setor['senior_p75'], dados_setor['master_p90']]
         })
 
