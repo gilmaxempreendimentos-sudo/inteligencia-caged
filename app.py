@@ -155,7 +155,7 @@ elif menu == "📊 Painel de Inteligência":
 
         st.markdown("---")
 
-        st.subheader(f"Mapeamento por Setor Económico")
+        st.subheader(f"Mapeamento por Setor Econômico")
         fig_setores = px.bar(
             df_cargo, x='media_salarial', y='setor_economico', orientation='h',
             color='media_salarial', color_continuous_scale='Teal', text='media_salarial',
